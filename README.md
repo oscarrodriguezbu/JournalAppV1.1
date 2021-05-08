@@ -4,4 +4,6 @@ He modificado un trabajo que me gustó mucho en una clase de un curso de Udemy c
 Aún quiero meterle cosicas a este proyecto.
 
 
+Aun me falta hacerlo responsive.
+
 

@@ -1,0 +1,137 @@
+.journal__main-content {
+    display: flex;
+}
+
+.journal__sidebar{
+    background-color: $dark-grey;
+    color: white;
+    display: flex;
+    flex-direction: column;
+   /*  min-height: 100vh; */
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 450px;
+}
+
+.journal__sidebar-navbar{
+    display: flex;
+    justify-content: space-between;
+}
+
+.journal__sidebar-navbar h3 {
+    font-weight: lighter;
+}
+
+.journal__new-entry {   
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+    width: 100%;
+
+    transition: color .3s ease;
+
+    &:hover {
+        color: darken($color: white, $amount: 20);
+    }
+}
+
+.journal__entries{
+    flex: 1 1 auto; /* para que use todo el espacio restante */
+    margin-top: 30px;
+    overflow-y: auto;
+    max-height: 580px;
+    
+}
+
+.journal__entry{
+    background-color: white;
+    border-radius: 4px;
+    color: $dark-grey;
+    display: flex;
+    margin-bottom: 10px;
+    overflow: hidden;
+    scroll-margin-left: -10px;
+}
+
+/* scroll */
+
+.journal__entries::-webkit-scrollbar {    
+    width: 5px;       
+  }
+  
+  /* Track */
+.journal__entries::-webkit-scrollbar-track {
+    background: transparent;    
+}
+   
+  /* Handle */
+.journal__entries::-webkit-scrollbar-thumb {
+    background:  darken($color: $light-grey, $amount: 20);
+    border-radius: 4px;
+  
+    /* Handle on hover */
+    &:hover {
+    background: darken($color: $light-grey, $amount: 40);
+    }    
+}
+  
+  
+
+.journal__entry-picture {    
+    width: 60%;
+    min-height: 200px;
+    
+}
+
+.journal__entry-body {
+    padding: 10px;
+    width: 100%;
+}
+
+.journal__entry-title{
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.journal__entry-content {
+    font-size: 10px;
+    max-height: 120px;
+    overflow-y: auto;
+}
+
+
+.journal__entry-content::-webkit-scrollbar {    
+    width: 5px;    
+       
+  }
+  
+  /* Track */
+.journal__entry-content::-webkit-scrollbar-track {
+    background: transparent;    
+}
+   
+  /* Handle */
+.journal__entry-content::-webkit-scrollbar-thumb {
+    background:  darken($color: $light-grey, $amount: 20);
+    border-radius: 4px;
+   
+    /* Handle on hover */
+    &:hover {
+    background: darken($color: $light-grey, $amount: 40);
+    }    
+}
+
+.journal__entry-date-box {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 5px 5px 5px 0 ;
+}
+
+.journal__entry-date-box span{
+    font-size: 8px;
+}

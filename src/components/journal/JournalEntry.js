@@ -34,7 +34,8 @@ export const JournalEntry = ({ id, date, title, body, url }) => {
                     }}
                 ></div>
             }
-            <div className="journal__entry-body">
+           <div className="journal__entry-body-date">
+           <div className="journal__entry-body fix-texto-largo">
                 <p className="journal__entry-title  mb-5">
                     {title}
                 </p>
@@ -55,6 +56,7 @@ export const JournalEntry = ({ id, date, title, body, url }) => {
                 <span>{noteDate.format('L')} </span>
                 <h4>{capitalizeFirstLetter(noteDate.format('dddd'))}</h4>
             </div>
+           </div>
         </div>
     )
 }

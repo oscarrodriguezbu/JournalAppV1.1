@@ -11,6 +11,7 @@
     padding-left: 10px;
     padding-right: 10px;
     width: 450px;
+    height: 100vh;
 }
 
 .journal__sidebar-navbar{
@@ -42,7 +43,7 @@
     flex: 1 1 auto; /* para que use todo el espacio restante */
     margin-top: 30px;
     overflow-y: auto;
-    max-height: 580px;
+    max-height: 420px;
     
 }
 
@@ -81,14 +82,39 @@
   
 
 .journal__entry-picture {    
-    width: 60%;
+    /* width: 100%; */
+    min-width: 30%;
     min-height: 200px;
     
+}
+.journal__entry-body-date{
+display: flex;
+flex-direction: column;
+justify-content: space-between;
 }
 
 .journal__entry-body {
     padding: 10px;
-    width: 100%;
+    /* width: 100%; */
+}
+
+.fix-texto-largo {
+    /* overflow: hidden;
+    text-overflow: ellipsis; */
+    /* https://css-tricks.com/snippets/css/prevent-long-urls-from-breaking-out-of-container/ */
+    /* These are technically the same, but use both */
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    -ms-word-break: break-all;
+    /* This is the dangerous one in WebKit, as it breaks things wherever */
+    word-break: break-all;
+    /* Instead use this non-standard one: */
+    word-break: break-word;
+    /* Adds a hyphen where the word breaks, if supported (No Blink) */
+    -ms-hyphens: auto;
+    -moz-hyphens: auto;
+    -webkit-hyphens: auto;
+    hyphens: auto;
 }
 
 .journal__entry-title{
